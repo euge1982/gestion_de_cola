@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Turnos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  
+  <div class="container">
+    <!--Muestra el Turnero con el turno actual y los 3 que le siguen-->
+    <div class="section" id="pantallaComun">   
+      <h2>TURNERO</h2>
+      <div class="turno-container">
+        <div id="turnoActual">Turno Actual: N/A</div>
+        <div id="proximoTurno">Próximos Turnos: N/A </div>
+      </div>
+    </div>    
+    <!--Muestra el Totem para sacar turnos que usa el Usuario-->
+    <div class="section" id="usuario">   
+      <h2>TOTEM DE USUARIOS</h2>
+      <button id="nuevoTurnoBtn">Sacar Nuevo Turno</button>
+    </div>
+  </div>
+   <!--Muestra lo que puede hacer el administrador-->
+   <div class="section" id="administrador">   
+    <h2>ADMINISTRADOR</h2>
+    <button id="llamarProxTurnoBtn">Llamar Siguiente Turno</button>
+    <div id="turnosAtendidos">Turnos Atendidos Hoy: 0</div>
+  </div>
+
+  <!--Importa socket.io-->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!--Importa los scripts que voy a necesitar-->
+  <script src="turnero.js"></script>
+  <script src="administrador.js"></script>
+  <script src="usuario.js"></script>
+
+</body>
+</html>
+
